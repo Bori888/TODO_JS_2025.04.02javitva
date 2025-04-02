@@ -34,5 +34,6 @@ export default class Todo {
       const e = new CustomEvent("remove", { detail: this.#index });
       window.dispatchEvent(e);
     });
+    
   }
 }
