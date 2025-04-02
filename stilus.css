@@ -15,6 +15,25 @@ body{
     background-size: cover;
     
 }
+
 h1,h2,main,aside,p{
-    border: 1px solid black;
+    border: 2px solid black;
+    border-radius:10px ;
+}
+.ready{
+    background-color: rgb(176, 241, 176);
+}
+.delete{
+    background-color: rgb(250, 132, 132);
+}
+
+footer p{
+    background-color: rgb(210, 149, 83);
+    color: white;
+}
+h1{
+    font-size: 50px;
+    padding-bottom: 50px;
+    padding-top:50px ;
+    
 }
