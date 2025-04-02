@@ -11,8 +11,9 @@ export default class Todos{
         this.viewTodos()
         this.viewInput()
         this.removeEvent()
-        this.addEvent()
         this.okEvent()
+        this.addEvent()
+        
 
     }
     removeEvent(){
@@ -25,13 +26,13 @@ export default class Todos{
 
     }
     okEvent(){
-        window.addEventListener("done",(event=>{
+        window.addEventListener("done",(event)=>{
             console.log(event.detail);
             this.#lista[event.detail].state =true
             this.viewTodos()
 
             
-        }))
+        })
     }
 
 
