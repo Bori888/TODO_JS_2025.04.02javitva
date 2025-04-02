@@ -1,19 +1,26 @@
 export default class TodoInput{
     
-    constructor(inputElem){
+    constructor(pElem){
         this.pElem =pElem
-        this.inputElem=inputElem
-        this.buttonElem= buttonElem
-
-        this.addElem =addElem
-        this.add()
+        this.view()
+        this.textElem =document.querySelector("#inp")
+        this.OKElem =document.querySelector("#OK")
+        console.log(this.OKElem);
+        this.OKeventListener()
+      
     }
-    add(){
-        this.addElem.addEventListener("click", () => {
-            console.log("add");
-            const a = new CustomEvent("add", { detail: this.pElem });
-            window.dispatchEvent(a);
-          });
+    view(){
+        let html =`<input type="text" id="inp" placeholder="add todo">
+         <button id="OK">OK</button>   `
+         this.pElem.insertAdjacentHTML("beforeend",html)
+    }
+    OKeventListener(){
+        this.OKElem.addEventListener("click",()=>{
+            console.log(this.textElem.value);
+            const e = new CustomEvent("add", { detail: this.textElem.value });
+        window.dispatchEvent(e);
+            
+        })
 
     }
 }
