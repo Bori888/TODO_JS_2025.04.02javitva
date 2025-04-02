@@ -1,6 +1,20 @@
 *{
-    border: 1px solid black;
+    
     padding: 10px;
     margin: auto;
     text-align: center;
+}
+main{
+    background-color: bisque;
+    width: 70%;
+}
+body{
+    background-image:url(kepek/h4.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    
+}
+h1,h2,main,aside,p{
+    border: 1px solid black;
 }
